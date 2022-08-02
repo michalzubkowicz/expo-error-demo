@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "module": "es2015",
+    "outDir": "build/dist",
+    "sourceMap": true,
+    "experimentalDecorators": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "jsx": "react",
+    "lib": [
+      "dom",
+      "es2017"
+    ],
+    "moduleResolution": "node",
+    "strict": true
+  },
+  "extends": "expo/tsconfig.base"
+}

@@ -1,0 +1,138 @@
+{
+  "name": "mz-system1",
+  "private": true,
+  "scripts": {
+    "start": "npm run buildinfo && expo start",
+    "buildinfo": "node buildinfo.create.js",
+    "android": "export ANDROID_HOME=~/Android/Sdk && npm run buildinfo && expo start --android",
+    "lint": "eslint ./src",
+    "lint-fix": "eslint",
+    "ios": "npm run buildinfo && expo start --ios",
+    "eject": "expo eject",
+    "build-android": "npm run buildinfo && expo build:android -t app-bundle",
+    "publish": "npm run buildinfo && eas build",
+    "clean-cache": "expo -c",
+    "extract-translations": "i18next 'src/**/*.{ts,tsx}'; cp -r locales src/i18n/"
+  },
+  "dependencies": {
+    "@babel/plugin-proposal-class-properties": "7.17.12",
+    "@expo/vector-icons": "13.0.0",
+    "@muscula.com/muscula-webapp-js-logger": "^1.2.1",
+    "@react-native-async-storage/async-storage": "~1.17.3",
+    "@react-native-community/datetimepicker": "6.1.2",
+    "@react-native-community/masked-view": "0.1.11",
+    "@react-native-google-signin/google-signin": "^7.2.2",
+    "@react-navigation/bottom-tabs": "6.0.5",
+    "@react-navigation/native": "6.0.2",
+    "@react-navigation/native-stack": "6.1.0",
+    "@react-navigation/stack": "^6.2.1",
+    "expo": "45.0.6",
+    "expo-asset": "8.5.0",
+    "expo-auth-session": "3.6.1",
+    "expo-font": "10.1.0",
+    "expo-linear-gradient": "^11.3.0",
+    "expo-localization": "^13.0.0",
+    "expo-random": "12.2.0",
+    "expo-react-native-adapter": "3.0.1",
+    "expo-splash-screen": "0.15.1",
+    "expo-status-bar": "1.3.0",
+    "firebase": "9.8.3",
+    "i18next": "21.8.9",
+    "intl-pluralrules": "1.3.1",
+    "mobx": "6.6.0",
+    "mobx-react-lite": "3.4.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-i18next": "11.17.1",
+    "react-native": "0.68.2",
+    "react-native-elements": "3.4.2",
+    "react-native-firebase": "5.6.0",
+    "react-native-gesture-handler": "2.2.1",
+    "react-native-indicators": "0.17.0",
+    "react-native-reanimated": "2.8.0",
+    "react-native-safe-area-context": "4.2.4",
+    "react-native-screens": "3.11.1",
+    "react-native-svg": "12.3.0",
+    "react-native-svg-icon": "0.10.0",
+    "react-native-touchable-scale": "2.1.2",
+    "react-native-vector-icons": "9.1.0",
+    "react-native-web": "0.17.7",
+    "scheduler": "0.22.0"
+  },
+  "devDependencies": {
+    "@babel/core": "7.12.9",
+    "@babel/plugin-proposal-decorators": "7.18.2",
+    "@babel/plugin-transform-flow-strip-types": "7.17.12",
+    "@types/react": "~17.0.21",
+    "@types/react-dom": "17.0.11",
+    "@types/react-native": "~0.66.13",
+    "@types/react-native-indicators": "0.16.2",
+    "@typescript-eslint/parser": "5.31.0",
+    "babel-plugin-transform-decorators-legacy": "1.3.5",
+    "babel-plugin-transform-flow-strip-types": "6.22.0",
+    "babel-preset-expo": "9.1.0",
+    "eas-cli" : "0.56.0",
+    "eslint": "8.20.0",
+    "eslint-config-react-app": "7.0.1",
+    "i18next-parser": "6.5.0",
+    "react-native-typescript-transformer": "1.2.13",
+    "typescript": "4.3.5"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "plugin:@typescript-eslint/recommended"
+    ],
+    "rules": {
+      "@typescript-eslint/no-inferrable-types": "off",
+      "@typescript-eslint/ban-ts-comment": "off",
+      "@typescript-eslint/no-non-null-assertion": "off",
+      "@typescript-eslint/no-explicit-any": "off",
+      "@typescript-eslint/ban-types": "off",
+      "@typescript-eslint/no-var-requires": "off",
+      "no-empty-pattern": "off",
+      "no-eval": "off",
+      "no-restricted-globals": "off",
+      "no-extend-native": "off",
+      "no-mixed-operators": "off",
+      "space-before-blocks": "error",
+      "space-unary-ops": "error",
+      "space-infix-ops": "error",
+      "space-before-function-paren": "off",
+      "space-in-parens": "error",
+      "keyword-spacing": "error",
+      "object-curly-spacing": [
+        "error",
+        "never"
+      ],
+      "no-multi-spaces": "error",
+      "semi": [
+        2,
+        "always"
+      ],
+      "lines-between-class-members": [
+        "error",
+        "always",
+        {
+          "exceptAfterSingleLine": true
+        }
+      ],
+      "react/jsx-tag-spacing": [
+        "error",
+        {
+          "closingSlash": "never",
+          "beforeSelfClosing": "never",
+          "afterOpening": "never",
+          "beforeClosing": "never"
+        }
+      ],
+      "react/self-closing-comp": [
+        "error",
+        {
+          "component": true,
+          "html": true
+        }
+      ]
+    }
+  }
+}

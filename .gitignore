@@ -1,0 +1,10 @@
+.idea/
+node_modules/
+.expo/*
+npm-debug.*
+*.jks
+*.p12
+*.key
+*.mobileprovision
+buildinfo.json
+google-services.json
